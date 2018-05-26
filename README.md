@@ -43,11 +43,19 @@ Usig the command `docker exec -it fasi/fullcalender bash` to run `bash` in the l
  [Run at browser]: http://localhost/NexintoCalendar/teamCalendar.html
 
 ### Create database Tables
-[update the password]: UPDATE mysql.user SET Password=PASSWORD('password') WHERE User='root'; FLUSH PRIVILEGES;
-[login into the database]:  mysql -uroot -p
+- [update the password]:
+
+            UPDATE mysql.user SET Password=PASSWORD('password') WHERE User='root'; FLUSH PRIVILEGES;
+
+- [login into the database]: 
+
+                            mysql -uroot -p
                             password: password
-[Use the test database]: use test;
-[create the tables]:
+
+- [Use the test database]:  use test;
+
+- [create the tables]: 
+
                       create table employee (
                         empName varchar(30),
                         empID int(4) not null,
@@ -55,36 +63,37 @@ Usig the command `docker exec -it fasi/fullcalender bash` to run `bash` in the l
                         );
 
 MariaDB [test]> desc employee;
-+---------+-----------------+------+-----+---------+-------+
-| Field   | Type            | Null | Key | Default | Extra |
-+---------+-----------------+------+-----+---------+-------+
-| empName | varchar(30)     | YES  |     | NULL    |       |
-| empID   | int(3) unsigned | NO   | PRI | NULL    |       |
-+---------+-----------------+------+-----+---------+-------+
 
-create table empEvents (
-  empName varchar(30),
-  title varchar(30),
-  start date,
-  end date,
-  Description varchar(30),
-  empID int(3),
-  noHours int(4),
-  foreign key (empID) references employee(empID)
-  );
+                        +---------+-----------------+------+-----+---------+-------+
+                        | Field   | Type            | Null | Key | Default | Extra |
+                        +---------+-----------------+------+-----+---------+-------+
+                        | empName | varchar(30)     | YES  |     | NULL    |       |
+                        | empID   | int(3) unsigned | NO   | PRI | NULL    |       |
+                        +---------+-----------------+------+-----+---------+-------+
 
-MariaDB [test]> desc empEvents;
-+-------------+-----------------+------+-----+---------+-------+
-| Field       | Type            | Null | Key | Default | Extra |
-+-------------+-----------------+------+-----+---------+-------+
-| empName     | varchar(30)     | YES  |     | NULL    |       |
-| title       | varchar(30)     | YES  |     | NULL    |       |
-| start       | date            | YES  |     | NULL    |       |
-| end         | date            | YES  |     | NULL    |       |
-| Description | varchar(30)     | YES  |     | NULL    |       |
-| empID       | int(3) unsigned | NO   | MUL | 0       |       |
-| noHours     | int(4)          | YES  |     | NULL    |       |
-+-------------+-----------------+------+-----+---------+-------+
+                        create table empEvents (
+                          empName varchar(30),
+                          title varchar(30),
+                          start date,
+                          end date,
+                          Description varchar(30),
+                          empID int(3),
+                          noHours int(4),
+                          foreign key (empID) references employee(empID)
+                          );
+
+                        MariaDB [test]> desc empEvents;
+                        +-------------+-----------------+------+-----+---------+-------+
+                        | Field       | Type            | Null | Key | Default | Extra |
+                        +-------------+-----------------+------+-----+---------+-------+
+                        | empName     | varchar(30)     | YES  |     | NULL    |       |
+                        | title       | varchar(30)     | YES  |     | NULL    |       |
+                        | start       | date            | YES  |     | NULL    |       |
+                        | end         | date            | YES  |     | NULL    |       |
+                        | Description | varchar(30)     | YES  |     | NULL    |       |
+                        | empID       | int(3) unsigned | NO   | MUL | 0       |       |
+                        | noHours     | int(4)          | YES  |     | NULL    |       |
+                        +-------------+-----------------+------+-----+---------+-------+
 
 ### known problem
 If the calendar did not show at the specified url under the browser. Please enter into the docker container
