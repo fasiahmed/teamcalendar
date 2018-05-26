@@ -5,8 +5,8 @@ This is a Dockerfile to build XAMPP based on ubuntu:16.04.
 ### Build Image From Dockerfile
 
 First, using command `git clone` to clone this project.
-
-    $ git clone https://github.com/fasi/FullCalendar-XAMPP.git
+            $ git clone https://github.com/fasiahmed/teamcalendar.git
+Using (SSH) $ git clone git@github.com:fasiahmed/teamcalendar.git         
 
 Second, buildng XAMPP image form Dockerfile, you can use tag `-t` to name this image.
 
