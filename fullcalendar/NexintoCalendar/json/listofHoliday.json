@@ -1,0 +1,53 @@
+[
+
+  {
+    "title": "NEW YEAR'S DAY",
+    "start": "2018-01-01",
+    "end": "2018-01-01" 
+  },
+  {
+    "title": "GOOD FRIDAY",
+    "start": "2018-03-30",
+    "end": "2018-03-30"
+  },
+  {
+    "title": "EASTER MONDAY",
+    "start": "2018-04-02",
+    "end": "2018-04-02"
+  },
+  {
+    "title": "LABOUR DAY",
+    "start": "2018-05-01",
+    "end": "2018-05-01"
+  },
+  {
+    "title": "ASCENSION DAY",
+    "start": "2018-05-10",
+    "end": "2018-05-10"
+  },
+  {
+    "title": "WHIT MONDAY",
+    "start": "2018-05-21",
+    "end": "2018-05-21"
+  },
+  {
+    "title": "DAY OF GERMAN UNITY",
+    "start": "2018-10-03",
+    "end": "2018-10-03"
+  },
+  {
+    "title": "REFORMATION DAY",
+    "start": "2018-10-31",
+    "end": "2018-10-31"
+  },
+  {
+    "title": "CHRISTMAS DAY",
+    "start": "2018-12-25",
+    "end": "2018-12-25"
+  },
+  {
+    "title": "2ND DAY OF CHRISTMAS",
+    "start": "2018-12-26",
+    "end": "2018-12-26"
+  }
+]
