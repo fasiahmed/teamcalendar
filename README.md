@@ -5,8 +5,10 @@ This is a Dockerfile to build XAMPP based on ubuntu:16.04.
 ### Build Image From Dockerfile
 
 First, using command `git clone` to clone this project.
+
             $ git clone https://github.com/fasiahmed/teamcalendar.git
-Using (SSH) $ git clone git@github.com:fasiahmed/teamcalendar.git         
+
+            Using (SSH) $ git clone git@github.com:fasiahmed/teamcalendar.git         
 
 Second, buildng XAMPP image form Dockerfile, you can use tag `-t` to name this image.
 
@@ -14,10 +16,12 @@ Second, buildng XAMPP image form Dockerfile, you can use tag `-t` to name this i
 
 ### Useage
 [using Docker hub]:
-- Setup 1 : Pull this image from Docker Hub.
-           $ docker pull fasi/fullcalender
-           Run the docker container.
-          $ docker run -d -p 80:80 -p 443:443 -p 3306:3306 fasi/fullcalender
+ 
+            Pull this image from Docker Hub.
+            $ docker pull fasi/fullcalender
+           
+            Run the docker container.
+             $ docker run -d -p 80:80 -p 443:443 -p 3306:3306 fasi/fullcalender
 
 [using the Dockerfile]
 - Build the docker image using Dockerfile.
