@@ -95,10 +95,10 @@ MariaDB [test]> desc employee;
                         | noHours     | int(4)          | YES  |     | NULL    |       |
                         +-------------+-----------------+------+-----+---------+-------+
 
-### known problem
-If the calendar did not show at the specified url under the browser. Please enter into the docker container
-$ docker exec -it <containerID> /bin/bash
-$ cd /opt/lampp/ctlscript.sh start   ( This will start the mysql, httpd and php if they have not started properly )
+### Script for starting and stopping the services of XAMPP
+            $ docker exec -it <containerID> /bin/bash
+            $ /opt/lampp/ctlscript.sh start   (start the services)
+            $ /opt/lampp/ctlscript.sh stop    (stop the services)
 
 ### Description of the Calendar
 [ Add an Event]
