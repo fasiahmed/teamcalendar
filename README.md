@@ -1,4 +1,4 @@
-# XAMPP Dockerfile
+# Dockerfile
 
 This is a Dockerfile to build XAMPP based on ubuntu:16.04.
 
